@@ -23,6 +23,7 @@
       "pages/*": ["src/pages/*"],
       "components/*": ["src/components/*"],
       "asset/*": ["src/asset/*"],
+      "hooks/*": ["src/hooks/*"],
     },
   },
   "include": ["vite.config.ts"]

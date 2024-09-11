@@ -1,5 +1,5 @@
 import ListGeneral from "components/list/ListGeneral"
-import Header from "components/navigations/header"
+import Header from "components/specific/navigations/header"
 import MainLayout from "layouts/MainLayout"
 const ProfilePage = () => {
     return (

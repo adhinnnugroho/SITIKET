@@ -1,22 +1,17 @@
-import { useEffect } from "react"
-import MobileNavigation from "./MobileNavigation"
+import ComponentManagement from "components/ComponentManagement";
+import useDocumentTitle from "hooks/useDocumentTitle"
 
-type propType = {
-    'title'?: string,
-    'children'?: React.ReactNode
+interface MainLayoutProps {
+    children: React.ReactNode;
+    title?: string;
 }
-const MainLayout = (prop: propType) => {
-    const { title, children } = prop
-    useEffect(() => {
-        document.title = title ?? 'SITIKET'
-    })
 
-
+const MainLayout = ({ title, children }: MainLayoutProps) => {
+    useDocumentTitle(title ?? 'SITIKET')
     return (
         <div className="w-full">
             {children}
-
-            <MobileNavigation   />
+            <ComponentManagement.MobileNavigation   />
         </div>
     )
 }
