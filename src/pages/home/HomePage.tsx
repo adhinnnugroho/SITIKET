@@ -17,11 +17,11 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <div className="bg-white drop-shadow-xl rounded-xl p-3 ml-4 mr-4 -mt-7">
+            <div className="dark:bg-gray-800 bg-white drop-shadow-xl rounded-xl p-3 ml-4 mr-4 -mt-7">
                 <div className="relative">
                     <i className='bx bx-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl'></i>
                     <input
-                        className="w-full p-2 pl-10 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full p-2 pl-10 dark:bg-gray-900 bg-white rounded-xl border dark:border-gray-900 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         placeholder="Search..."
                     />
                 </div>

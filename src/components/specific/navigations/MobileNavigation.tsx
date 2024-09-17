@@ -5,7 +5,7 @@ const MobileNavigation = () => {
     const isActive = (path: string) => location.pathname === path;
 
     return (
-        <div className="w-screen fixed bottom-0 bg-white border border-white border-t-gray-400 p-2">
+        <div className="w-screen transition-all duration-700 ease-in-out fixed bottom-0 dark:bg-black bg-white border dark:border-black border-white dark:border-t-gray-700 border-t-gray-400 p-2">
             <div className="grid grid-cols-4 gap-3">
                 <Link to='/'>
                     <div className={`flex items-center justify-center ${isActive('/') ? 'bg-blue-600 text-white rounded-lg p-2' : ''}`}>

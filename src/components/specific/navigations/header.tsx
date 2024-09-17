@@ -9,7 +9,7 @@ const Header = (prop: PropsType) => {
     const { title, link } = prop
 
     return (
-        <div className="flex justify-between items-center p-4 bg-white border-gray-200">
+        <div className="flex justify-between items-center p-4 dark:bg-black bg-white border-gray-200 transition-all duration-700 ease-in-out">
             <button onClick={() => {
                 if (typeof link === 'string') {
                     navigate(link);
