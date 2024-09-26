@@ -8,7 +8,8 @@ const MobileNavigation = () => {
         <div className="w-screen transition-all duration-700 ease-in-out fixed bottom-0 dark:bg-black bg-white border dark:border-black border-white dark:border-t-gray-700 border-t-gray-400 p-2">
             <div className="grid grid-cols-4 gap-3">
                 <Link to='/'>
-                    <div className={`flex items-center justify-center ${isActive('/') ? 'bg-blue-600 text-white rounded-lg p-2' : ''}`}>
+                    <div
+                        className={`flex items-center justify-center ${isActive('/') ? 'bg-blue-600 text-white rounded-lg p-2' : ''}`}>
                         <i className={`bx bx-home ${isActive('/') ? 'text-2xl' : 'text-4xl'}`}></i>
                         {isActive('/') && <span className="ml-1">Home</span>}
                     </div>
@@ -27,7 +28,7 @@ const MobileNavigation = () => {
                 </Link>
                 <Link to='/profile'>
                     <div className={`flex items-center justify-center ${isActive('/profile') ? 'bg-blue-600 text-white rounded-lg p-2' : ''}`}>
-                        <i  className={`bx bx-user ${isActive('/profile') ? 'text-2xl' : 'text-4xl'}`}></i>
+                        <i className={`bx bx-user ${isActive('/profile') ? 'text-2xl' : 'text-4xl'}`}></i>
                         {isActive('/profile') && <span className=" ml-1 pr-1">Profile</span>}
                     </div>
                 </Link>

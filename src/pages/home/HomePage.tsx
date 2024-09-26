@@ -41,12 +41,21 @@ const HomePage = () => {
 
 
             <div className="hotel-sections p-3 ml-3">
-                <h5 className="text-2xl font-semibold mt-20">
+                <h5 className="text-2xl font-semibold mt-5">
                     Hotel terbaru di SITIKET
                 </h5>
-                <p className="mt-3 text-black">
+                <p className="mt-3 dark:text-white text-black">
                     ingin santai sejenak dari rutinitas harian? Yuk, cobain nginep disini bareng temen dan keluarga
                 </p>
+
+                <div className="grid grid-cols-2 gap-4 mt-4">
+                    <div className="col-span-1">
+                        <div className="border border-gray-300 p-3 rounded-lg"></div>
+                    </div>
+                    <div className="col-span-1">
+                        <div className="border border-gray-300 p-3 rounded-lg"></div>
+                    </div>
+                </div>
             </div>
 
         </MainLayout>
