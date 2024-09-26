@@ -1,37 +1,12 @@
-import { Link, useLocation } from "react-router-dom";
+import MobileNavigationCard from "components/card/navigations/MobileNavigationsCard";
 
 const MobileNavigation = () => {
-    const location = useLocation();
-    const isActive = (path: string) => location.pathname === path;
-
     return (
-        <div className="w-screen transition-all duration-700 ease-in-out fixed bottom-0 dark:bg-black bg-white border dark:border-black border-white dark:border-t-gray-700 border-t-gray-400 p-2">
-            <div className="grid grid-cols-4 gap-3">
-                <Link to='/'>
-                    <div
-                        className={`flex items-center justify-center ${isActive('/') ? 'bg-blue-600 text-white rounded-lg p-2' : ''}`}>
-                        <i className={`bx bx-home ${isActive('/') ? 'text-2xl' : 'text-4xl'}`}></i>
-                        {isActive('/') && <span className="ml-1">Home</span>}
-                    </div>
-                </Link>
-                <Link to='/details'>
-                    <div className={`flex items-center justify-center ${isActive('/details') ? 'bg-blue-600 text-white rounded-lg p-2' : ''}`}>
-                        <i className='bx bx-detail text-4xl'></i>
-                        {isActive('/details') && <span className="ml-2">Details</span>}
-                    </div>
-                </Link>
-                <Link to='/copy'>
-                    <div className={`flex items-center justify-center ${isActive('/copy') ? 'bg-blue-600 text-white rounded-lg p-2' : ''}`}>
-                        <i className='bx bx-copy-alt text-4xl'></i>
-                        {isActive('/copy') && <span className="ml-2">Copy</span>}
-                    </div>
-                </Link>
-                <Link to='/profile'>
-                    <div className={`flex items-center justify-center ${isActive('/profile') ? 'bg-blue-600 text-white rounded-lg p-2' : ''}`}>
-                        <i className={`bx bx-user ${isActive('/profile') ? 'text-2xl' : 'text-4xl'}`}></i>
-                        {isActive('/profile') && <span className=" ml-1 pr-1">Profile</span>}
-                    </div>
-                </Link>
+        <div className="w-screen  fixed bottom-0 border dark:border-black border-white dark:border-t-gray-700 border-t-gray-400 p-2">
+            <div className="grid grid-cols-3 gap-3">
+                <MobileNavigationCard to="/" iconClass="home" label="Home" />
+                <MobileNavigationCard to="/ticket" iconClass="detail" label="My Ticket" />
+                <MobileNavigationCard to="/profile" iconClass="user" label="Profile" />
             </div>
         </div>
     )
