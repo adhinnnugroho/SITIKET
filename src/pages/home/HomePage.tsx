@@ -39,7 +39,6 @@ const HomePage = () => {
                 </div>
             </div>
 
-
             <div className="hotel-sections p-3 ml-3">
                 <h5 className="text-2xl font-semibold mt-5">
                     Hotel terbaru di SITIKET
@@ -57,7 +56,6 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-
         </MainLayout>
     )
 }

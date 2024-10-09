@@ -2,7 +2,7 @@ import MobileNavigationCard from "components/card/navigations/MobileNavigationsC
 
 const MobileNavigation = () => {
     return (
-        <div className="w-screen  fixed bottom-0 border dark:border-black border-white dark:border-t-gray-700 border-t-gray-400 p-2">
+        <div className="w-screen  fixed bottom-0 border border-transparent dark:border-t-gray-100 border-t-gray-600 p-2  dark:bg-black bg-white dark:text-white text-black transition-all duration-700 ease-in-out ">
             <div className="grid grid-cols-3 gap-3">
                 <MobileNavigationCard to="/" iconClass="home" label="Home" />
                 <MobileNavigationCard to="/ticket" iconClass="detail" label="My Ticket" />
