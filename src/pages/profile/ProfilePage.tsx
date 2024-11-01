@@ -8,22 +8,16 @@ const ProfilePage = () => {
         <MainLayout title="SETTING - SITIKET">
             <ComponentManagement.Header title="Setting" link={'/'} />
             <div className="mb-[1] pb-20">
-                <div className="p-4">
-                    <p className="font-semibold text-xl">
-                        Profile
-                    </p>
-
+                <ComponentManagement.InfoCard title="Profile">
                     <ComponentManagement.ProfileCard icon={'user'} title={'Update Profile'} />
                     <ComponentManagement.ProfileCard icon={'lock'} title={'Change Password'} />
                     <ComponentManagement.ProfileCard icon={'mobile-alt'} title={'Versi Application'} />
-                </div>
-                <div className="p-4 ">
-                    <p className="font-semibold text-xl">
-                        Settings
-                    </p>
+                </ComponentManagement.InfoCard>
+
+                <ComponentManagement.InfoCard title="Settings">
                     <ComponentManagement.DarkModeCard onclick={handleToggleThemes} iconsThemes={iconsThemes} themes={themes} />
                     <ComponentManagement.ProfileCard icon={'log-in-circle'} title={'Logout  '} />
-                </div>
+                </ComponentManagement.InfoCard>
             </div>
         </MainLayout>
     );
