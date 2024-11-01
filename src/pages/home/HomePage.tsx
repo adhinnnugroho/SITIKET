@@ -1,4 +1,6 @@
+import AssetsManagement from "asset/AssetsManagement"
 import MainMenuCard from "components/card/MainMenuCard"
+import ComponentManagement from "components/ComponentManagement"
 import MainLayout from "layouts/MainLayout"
 
 const HomePage = () => {
@@ -32,14 +34,14 @@ const HomePage = () => {
                     <MainMenuCard title="Pesawat" icons="plane" />
                 </div>
                 <div className="col-span-1">
-                    <MainMenuCard title="Kereta Api" icons="train"  />
+                    <MainMenuCard title="Kereta Api" icons="train" />
                 </div>
                 <div className="col-span-1 flex justify-center">
-                    <MainMenuCard title="Hotel" icons="building-house"  />
+                    <MainMenuCard title="Hotel" icons="building-house" />
                 </div>
             </div>
 
-            <div className="hotel-sections p-3 ml-3">
+            <div className="hotel-sections p-3  pb-[100px]">
                 <h5 className="text-2xl font-semibold mt-5">
                     Hotel terbaru di SITIKET
                 </h5>
@@ -48,12 +50,10 @@ const HomePage = () => {
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 mt-4">
-                    <div className="col-span-1">
-                        <div className="border border-gray-300 p-3 rounded-lg"></div>
-                    </div>
-                    <div className="col-span-1">
-                        <div className="border border-gray-300 p-3 rounded-lg"></div>
-                    </div>
+                    <ComponentManagement.HotelCard HotelName="Hotel garuda" Rating={5} HotelImage={AssetsManagement.Hotel} />
+                    <ComponentManagement.HotelCard HotelName="Hotel garuda" Rating={5} HotelImage={AssetsManagement.Hotel} />
+                    <ComponentManagement.HotelCard HotelName="Hotel garuda" Rating={5} HotelImage={AssetsManagement.Hotel} />
+                    <ComponentManagement.HotelCard HotelName="Hotel garuda" Rating={5} HotelImage={AssetsManagement.Hotel} />
                 </div>
             </div>
         </MainLayout>
