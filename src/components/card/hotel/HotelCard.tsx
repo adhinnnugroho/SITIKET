@@ -14,6 +14,14 @@ const HotelCard = ({ HotelName, Rating, HotelImage }: any) => {
                         ))
                     }
                 </div>
+
+
+                <h3 className="mt-3 text-xl font-semibold text-red-600">
+                    IDR 1.000.000
+                </h3>
+                <p className="text-gray-500 text-md mt-1 mb-3">
+                    Belum termasuk pajak
+                </p>
             </div>
         </div>
     )

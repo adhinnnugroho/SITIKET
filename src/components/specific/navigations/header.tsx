@@ -1,31 +1,38 @@
 import { useNavigate } from "react-router-dom";
 
-type PropsType = {
-    'title': string,
-    'link'?: string | React.MouseEventHandler<HTMLButtonElement>
+type HeaderPropsType = {
+    title: string,
+    link?: string | React.MouseEventHandler<HTMLButtonElement>
 }
-const Header = (prop: PropsType) => {
+
+const Header = ({ title, link }: HeaderPropsType) => {
     const navigate = useNavigate();
-    const { title, link } = prop
 
     return (
-        <div className="flex justify-between items-center p-4 dark:bg-black bg-white border-gray-200 transition-all duration-700 ease-in-out">
-            <button onClick={() => {
-                if (typeof link === 'string') {
-                    navigate(link);
-                } else {
-                    navigate(-1);
-                }
-            }} className="px-3 py-1 text-gray-600 hover:text-gray-800 rounded-lg border border-gray-300">
-                <i className='bx bx-chevron-left text-2xl font-bold'></i>
-            </button>
-            <p className="text-lg font-semibold">
-                {title}
-            </p>
-            <button className="px-3 py-1 text-gray-600 hover:text-gray-800">
-            </button>
+        <div className="grid grid-cols-3 items-center p-3 border border-transparent border-b-gray-800">
+            <div className="col-span-1 flex justify-start">
+                <button onClick={() => {
+                    if (typeof link === 'string') {
+                        navigate(link);
+                    } else {
+                        navigate(-1);
+                    }
+                }} className="px-3 py-1 text-gray-600 hover:text-gray-800 rounded-lg border border-gray-300">
+                    <i className='bx bx-chevron-left text-2xl font-bold'></i>
+                </button>
+            </div>
+            <div className="col-span-1 flex justify-center">
+                <h2 className="text-2xl font-bold">
+                    {title}
+                </h2>
+            </div>
+            <div className="col-span-1 flex justify-end">
+                <button className="px-3 py-1 text-gray-600 hover:text-gray-800">
+                    {/* Optional icon or button */}
+                </button>
+            </div>
         </div>
     )
 }
 
-export default Header
+export default Header;
