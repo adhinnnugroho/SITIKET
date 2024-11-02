@@ -2,6 +2,7 @@ import AssetsManagement from "asset/AssetsManagement"
 import MainMenuCard from "components/card/MainMenuCard"
 import ComponentManagement from "components/ComponentManagement"
 import MainLayout from "layouts/MainLayout"
+import { Link } from "react-router-dom"
 
 const HomePage = () => {
     return (
@@ -31,13 +32,19 @@ const HomePage = () => {
 
             <div className="grid grid-cols-3 gap-2 mt-10">
                 <div className="col-span-1 flex justify-center">
-                    <MainMenuCard title="Pesawat" icons="plane" />
+                    <Link to={'/pesan-tiket-pesawat'}>
+                        <MainMenuCard title="Pesawat" icons="plane" />
+                    </Link>
                 </div>
                 <div className="col-span-1">
-                    <MainMenuCard title="Kereta Api" icons="train" />
+                    <Link to={'/pesan-tiket-kereta'}>
+                        <MainMenuCard title="Kereta Api" icons="train" />
+                    </Link>
                 </div>
                 <div className="col-span-1 flex justify-center">
-                    <MainMenuCard title="Hotel" icons="building-house" />
+                    <Link to={'/'}>
+                        <MainMenuCard title="Hotel" icons="building-house" />
+                    </Link>
                 </div>
             </div>
 

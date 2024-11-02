@@ -5,6 +5,7 @@ import DarkModeCard from "components/card/themes/DarkModeCard"
 import InfoCard from "./card/InfoCard"
 import HotelCard from "./card/hotel/HotelCard"
 import NotFoundSection from "./section/NotFoundSection"
+import PesanCard from "components/card/PesanCard"
 
 const ComponentManagement = {
     Header,
@@ -13,7 +14,8 @@ const ComponentManagement = {
     DarkModeCard,
     InfoCard,
     HotelCard,
-    NotFoundSection
+    NotFoundSection,
+    PesanCard
 }
 
 export default ComponentManagement
