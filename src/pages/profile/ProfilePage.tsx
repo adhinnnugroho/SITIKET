@@ -9,8 +9,8 @@ const ProfilePage = () => {
             <ComponentManagement.Header title="Setting" link={'/'} />
             <div className="mb-[1] pb-20">
                 <ComponentManagement.InfoCard title="Profile">
-                    <ComponentManagement.ProfileCard icon={'user'} title={'Update Profile'} />
-                    <ComponentManagement.ProfileCard icon={'lock'} title={'Change Password'} />
+                    <ComponentManagement.ProfileCard icon={'user'} title={'Update Profile'} link="/update-profile" />
+                    <ComponentManagement.ProfileCard icon={'lock'} title={'Change Password'} link="/change-password" />
                     <ComponentManagement.ProfileCard icon={'mobile-alt'} title={'Versi Application'} />
                 </ComponentManagement.InfoCard>
 

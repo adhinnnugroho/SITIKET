@@ -6,6 +6,7 @@ import InfoCard from "./card/InfoCard"
 import HotelCard from "./card/hotel/HotelCard"
 import NotFoundSection from "./section/NotFoundSection"
 import PesanCard from "components/card/PesanCard"
+import SimpleInput from "./input/SimpleInput"
 
 const ComponentManagement = {
     Header,
@@ -15,7 +16,8 @@ const ComponentManagement = {
     InfoCard,
     HotelCard,
     NotFoundSection,
-    PesanCard
+    PesanCard,
+    SimpleInput
 }
 
 export default ComponentManagement
